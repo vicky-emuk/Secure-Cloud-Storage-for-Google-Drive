@@ -25,7 +25,6 @@ def add_user_to_group(email, public_key):
     success = c.rowcount > 0
     conn.commit()
     conn.close()
-    print(f"Added user {email}: {success}")
     return success
 
 

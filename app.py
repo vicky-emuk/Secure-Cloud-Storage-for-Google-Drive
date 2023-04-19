@@ -65,7 +65,7 @@ def download_file():
             'fileContent': response_data['fileContent'],
             'iv': response_data['iv'],
             'uploader': response_data['uploader'],
-            'encryptedAesKeys': response_data['encryptedAesKeys']
+            'encryptedAesKeys': [response_data['encryptedAesKeys']]
         })
     else:
         return jsonify({'message': 'Failed to download file.'}), 400

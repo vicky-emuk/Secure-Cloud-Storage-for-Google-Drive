@@ -179,7 +179,6 @@ async function displayUsers() {
 }
 
 async function addUserToGroup() {
-    console.log('addUserToGroup called')
     const email = prompt('Enter the email address of the user you want to add:');
     if (!isValidEmail(email)) {
         alert('Invalid email address');

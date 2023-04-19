@@ -35,7 +35,6 @@ def download(file_id, file_name):
         file_metadata = service.files().get(fileId=file_id, fields='appProperties, description').execute()
         app_properties = file_metadata.get('appProperties', {})
         encrypted_aes_keys = file_metadata.get('description', '')
-        print(f"File metadata received: {file_metadata}, app_properties: {app_properties}, encrypted_keys: {encrypted_aes_keys}")
 
         return {
             'fileContent': file_content_base64,
